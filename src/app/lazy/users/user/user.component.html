@@ -1,0 +1,8 @@
+<p>user works!</p>
+<input type="text" [(ngModel)]="search"><button (click)="onSubmit()">Submit</button>
+
+<div>
+  <input type="number" [(ngModel)]="limit">
+</div>
+
+<geekwise-users-list [users]="users" (onChosen)="getUserByName($event)"></geekwise-users-list>

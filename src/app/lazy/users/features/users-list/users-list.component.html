@@ -1,0 +1,7 @@
+<p>users-list works!</p>
+<div *ngFor="let user of users" class="user">
+  <button (click)="onChose(user.login)" >{{user.login}}</button>
+  <!--<button (click)="getUserByName(user.login)">{{user.login}}</button>-->
+  <img [src]="user.avatar_url" alt="">
+  <a href="{{user.html_url}}">{{user.html_url}}</a>
+</div>

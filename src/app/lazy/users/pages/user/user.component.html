@@ -1,0 +1,10 @@
+<div *ngIf="!user">No User Found</div>
+<div class="user" *ngIf="user">
+
+  <button (click)="goToFollowers(user.login)">Followers</button>
+  <img [src]="user.avatar_url" alt="">
+  <div *ngFor="let key of usersService.getKeys(user)">
+    <div class="key">{{key}}</div>
+    <div class="value">{{ user[key] }}</div>
+  </div>
+</div>
